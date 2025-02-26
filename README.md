@@ -14,7 +14,7 @@ provide the source code of the demonstration app used in these examples. This wi
 and `xctestrun` configuration files to successfully execute an XCTest—just as it can be done with the following xcodebuild command:
 
 ```shell
-xcodebuild test-without-building -xctestrun PATH_TO_XCTESTRUN_FILE
+xcodebuild test-without-building -xctestrun $(PATH_TO_XCTESTRUN_FILE)
 ``` 
 
 More information on how to use it can be found below.
@@ -69,8 +69,8 @@ make
 ```
 
 * This script will:
-    * Build all five .ipa application files
-    * Generate a single xctestrun file
+    * Build all five `.ipa` application files
+    * Generate a single `xctestrun` file
     * Place the built `.ipa` files and `xctestrun` file inside the `app_binaries folder
 * These artifacts are then ready to be used with the existing `saucectl` configuration.
 
@@ -90,14 +90,14 @@ The `#` stands for the number of the below-mentioned examples.
 [`xctest_1.yaml`](/.sauce/xctest_1.yaml) provides a minimum configuration needed to run the XCTest tests.
 In this example, all test cases are configured in a single application are executed on a single, available device.
 
-#### Example 2 - Mix XCTest and XCUITEST - Multiple test Apps are configured
+#### Example 2 - Mix XCTest and XCUITest - Multiple test Apps are configured
 
 [`xctest_2.yaml`](/.sauce/xctest_2.yaml) provides a extended configuration needed to run the XCTest tests.
-In this example, all test cases (XCTests or XCUITEST) are configured in a multiple applications or Test UI applications are executed on a
+In this example, all test cases (XCTest or XCUITest) are configured in a multiple applications or Test UI applications are executed on a
 single, available device.
 
-#### Example 3 - Mix XCTest and XCUITEST- One XCUITest With system app - Multiple test Apps are configured
+#### Example 3 - Mix XCTest and XCUITest- One XCUITest With system app - Multiple test Apps are configured
 
 [`xctest_3.yaml`](/.sauce/xctest_3.yaml) provides a extended configuration needed to run the XCTest tests.
-In this example, all test cases (XCTests or XCUITEST) are configured in a multiple applications or Test UI applications that needs an
+In this example, all test cases (XCTest or XCUITest) are configured in a multiple applications or Test UI applications that needs an
 application or a system application are executed on a single, available device.
