@@ -9,9 +9,9 @@
 
 ## Introduction
 
-This repository contains multiple examples of how to run an XCTest on the Sauce Labs cloud. In addition to that, we provide the source code
-of the demonstration app used in these examples. This will help illustrate how to leverage `xctestplan` and `xctestrun` configuration files
-to successfully execute an XCTest—just as it can be done with the following xcodebuild command:
+This repository contains multiple examples of how to run an XCTest on the Sauce Labs cloud using real devices. In addition to that, we
+provide the source code of the demonstration app used in these examples. This will help illustrate how to leverage `xctestplan`
+and `xctestrun` configuration files to successfully execute an XCTest—just as it can be done with the following xcodebuild command:
 
 ```shell
 xcodebuild test-without-building -xctestrun PATH_TO_XCTESTRUN_FILE
@@ -21,6 +21,7 @@ More information on how to use it can be found below.
 
 ## Prerequisites
 
+- ***Apple Signing Certificate***: A valid Apple ***Code Signing Identity*** is required to build and sign applications for real device execution.
 - Please check our [documentation](https://docs.saucelabs.com/testrunner-toolkit/installation) for installing SauceCTL
   ***Note: minimum version is 0.192.0.***
 - Make sure you've set up your credentials on your local machine and or CI pipeline, see
