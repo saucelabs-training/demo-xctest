@@ -1,0 +1,66 @@
+{
+  "configurations" : [
+    {
+      "id" : "770D90D1-08CF-4AF9-81B4-402F26ECB418",
+      "name" : "Test Scheme Action",
+      "options" : {
+        "targetForVariableExpansion" : {
+          "containerPath" : "container:FakeCounterApp.xcodeproj",
+          "identifier" : "506AF5D12D429D9E008E829B",
+          "name" : "FakeCounterApp"
+        }
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FakeCounterApp.xcodeproj",
+      "identifier" : "506AF5D12D429D9E008E829B",
+      "name" : "FakeCounterApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FakeCounterApp.xcodeproj",
+        "identifier" : "0B27D37D2D562B7700514D89",
+        "name" : "FakeCounterDuplicateAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FakeCounterApp.xcodeproj",
+        "identifier" : "506AF5EB2D429DA0008E829B",
+        "name" : "FakeCounterAppUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FakeCounterApp.xcodeproj",
+        "identifier" : "0B27D3872D562B7700514D89",
+        "name" : "FakeCounterDuplicateAppUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FakeCounterApp.xcodeproj",
+        "identifier" : "0B19113F2D5C9B0900D7A67B",
+        "name" : "NoTestTargetAppUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "SkippedTests",
+        "SkippedTests\/testThatAlwaysFailsAndShouldBeSkipped()"
+      ],
+      "target" : {
+        "containerPath" : "container:FakeCounterApp.xcodeproj",
+        "identifier" : "506AF5E12D429DA0008E829B",
+        "name" : "FakeCounterAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

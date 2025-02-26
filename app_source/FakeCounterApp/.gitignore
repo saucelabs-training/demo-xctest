@@ -30,7 +30,7 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
-
+build_counter_app/
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
