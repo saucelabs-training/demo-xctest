@@ -55,12 +55,12 @@ The app consists of five targets:
 
 You can build the apps and generate the `xctestrun` file in two ways:
 
-1. Directly via xcodebuild
+#### 1. Directly via xcodebuild
 Navigate to the [app_source/FakeCounterApp](/app_source/FakeCounterApp) folder
 and run the xcodebuild command to generate the required build artifacts.
 
-1. Using the Makefile (Recommended)
-* From the project root, you can simply run the `make` command.
+#### 2. Using the Makefile (Recommended)
+From the project root, you can simply run the `make` command.
 
 ```shell
 make
@@ -70,16 +70,21 @@ make
     * Build all five `.ipa` application files
     * Generate a single `xctestrun` file
     * Place the built `.ipa` files and `xctestrun` file inside the `app_binaries folder
-* These artifacts are then ready to be used with the existing `saucectl` configuration.
+
+These artifacts are then ready to be used with the existing `saucectl` configuration.
 
 ## Examples
 
 All the below-mentioned examples can be found in the [`.sauce`](/.sauce)-folder. You can run the configurations by running the following
 command from the root of this folder
 
-      saucectl run --config ./.sauce/xctest_{#}.yaml
+      saucectl run --region {$REGION} --config ./.sauce/xctest_{#}.yaml
 
-The `#` stands for the number of the below-mentioned examples.
+* The `#` stands for the number of the below-mentioned examples.
+* The `{REGION}` specifies the Sauce Labs data center to use. Available options:
+  * us-west-1 (United States - West)
+  * us-east-4 (United States - East)
+  * eu-central-1 (Europe - Central)
 
 ### Real Devices
 
