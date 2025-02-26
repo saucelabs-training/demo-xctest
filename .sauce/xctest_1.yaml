@@ -1,0 +1,17 @@
+apiVersion: v1alpha
+kind: xctest
+sauce:
+  concurrency: 1
+xctest:
+  app: ./app_binaries/fake_counter_all_binaries/FakeCounterApp.ipa
+  xcTestRunFile: ./app_binaries/fake_counter_xctestrun_file/only_xctest_xctestrun_file/FakeCounterAppTest_only_xctests_are_configured.xctestrun
+suites:
+  - name: "Simple XCTest - Single test App is configured"
+    devices:
+      - name: ".*"
+artifacts:
+  download:
+    when: always
+    match:
+      - "*.*"
+    directory: ./

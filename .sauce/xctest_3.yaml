@@ -1,0 +1,22 @@
+apiVersion: v1alpha
+kind: xctest
+sauce:
+  concurrency: 1
+xctest:
+  app: ./app_binaries/fake_counter_all_binaries/FakeCounterApp.ipa
+  xcTestRunFile: ./app_binaries/fake_counter_xctestrun_file/all_test_types_xctestrun_file/FakeCounterAppTest_mixed_xctest_and_xcuitest_and_xcuitest_with_system_app.xctestrun
+  otherApps:
+    - ./app_binaries/fake_counter_all_binaries/FakeCounterDuplicateApp.ipa
+    - ./app_binaries/fake_counter_all_binaries/FakeCounterAppUITests-Runner.ipa
+    - ./app_binaries/fake_counter_all_binaries/FakeCounterDuplicateAppUITests-Runner.ipa
+    - ./app_binaries/fake_counter_all_binaries/NoTestTargetAppUITests-Runner.ipa
+suites:
+  - name: "Mix XCTest and XCUITEST- One XCUITest With system app - Multiple test Apps are configured"
+    devices:
+      - name: ".*"
+artifacts:
+  download:
+    when: always
+    match:
+      - "*.*"
+    directory: ./
