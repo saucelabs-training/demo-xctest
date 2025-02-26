@@ -56,12 +56,10 @@ The app consists of five targets:
 You can build the apps and generate the `xctestrun` file in two ways:
 
 1. Directly via xcodebuild
-
 Navigate to the [app_source/FakeCounterApp](/app_source/FakeCounterApp) folder
 and run the xcodebuild command to generate the required build artifacts.
 
 1. Using the Makefile (Recommended)
-
 * From the project root, you can simply run the `make` command.
 
 ```shell
