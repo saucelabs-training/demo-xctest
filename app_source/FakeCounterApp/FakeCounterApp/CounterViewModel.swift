@@ -19,6 +19,18 @@ class CounterViewModel: ObservableObject {
         }
     }
     
+    @Published var secondsElapsed: Int = 0
+    private var timerCancellable: AnyCancellable?
+
+    init() {
+        timerCancellable = Timer
+            .publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                self?.secondsElapsed += 1
+            }
+    }
+    
     func increase() {
         counter += 1
     }

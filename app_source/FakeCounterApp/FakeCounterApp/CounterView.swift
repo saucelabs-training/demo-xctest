@@ -22,18 +22,27 @@ struct CounterView: View {
                 .font(.system(size: 80, weight: .bold))
                 .accessibilityIdentifier("counterLabel")
             
-            Button("Increase") {
-                viewModel.increase()
-            }
-            .accessibilityIdentifier("increaseButton")
-            .font(.title2)
-            
-            Button("Decrease") {
-                viewModel.decrease()
-            }
-            .accessibilityIdentifier("decreaseButton")
-            .font(.title2)
-        }
+            HStack(spacing: 20) {
+                Button("Increase") {
+                    viewModel.increase()
+                }
+                .accessibilityIdentifier("increaseButton")
+                .buttonStyle(.borderedProminent)
+                .font(.title2)
+
+                Button("Decrease") {
+                    viewModel.decrease()
+                }
+                .accessibilityIdentifier("decreaseButton")
+                .buttonStyle(.borderedProminent)
+                .tint(.red) // Optional: make decrease button red
+                .font(.title2)
+           }
+
+           Text("Time elapsed: \(viewModel.secondsElapsed) seconds")
+               .font(.body)
+               .accessibilityIdentifier("timerLabel")
+}
         .padding()
     }
 }

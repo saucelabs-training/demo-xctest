@@ -10,6 +10,21 @@
           "name" : "FakeCounterApp"
         }
       }
+    },
+    {
+      "enabled" : false,
+      "id" : "1A05BC6B-7E1A-4F3C-BB77-CECB37A9528A",
+      "name" : "Test Scheme Action (copy)",
+      "options" : {
+        "environmentVariableEntries" : [
+
+        ],
+        "targetForVariableExpansion" : {
+          "containerPath" : "container:FakeCounterApp.xcodeproj",
+          "identifier" : "506AF5D12D429D9E008E829B",
+          "name" : "FakeCounterApp"
+        }
+      }
     }
   ],
   "defaultOptions" : {
@@ -20,35 +35,6 @@
     }
   },
   "testTargets" : [
-    {
-      "target" : {
-        "containerPath" : "container:FakeCounterApp.xcodeproj",
-        "identifier" : "0B27D37D2D562B7700514D89",
-        "name" : "FakeCounterDuplicateAppTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:FakeCounterApp.xcodeproj",
-        "identifier" : "506AF5EB2D429DA0008E829B",
-        "name" : "FakeCounterAppUITests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:FakeCounterApp.xcodeproj",
-        "identifier" : "0B27D3872D562B7700514D89",
-        "name" : "FakeCounterDuplicateAppUITests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:FakeCounterApp.xcodeproj",
-        "identifier" : "0B19113F2D5C9B0900D7A67B",
-        "name" : "NoTestTargetAppUITests"
-      }
-    },
     {
       "parallelizable" : true,
       "skippedTests" : [
